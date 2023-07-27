@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'amanda';
+    src: url('./newFont/Stenciles.ttf') format('truetype');
+  }
+  body{
+    font-family: 'amanda', sans-serif;
+  }
+  h1{
+    text-shadow: rgb(255, 255, 255) 0px 0px 5px, rgb(255, 255, 255) 0px 0px 10px, rgb(99, 170, 255) 0px 0px 20px, rgb(99, 170, 255) 0px 0px 30px, rgb(99, 170, 255) 0px 0px 40px, rgb(99, 170, 255) 0px 0px 55px, rgb(99, 170, 255) 0px 0px 75px;
+    font-size: 60px;
+   color: #fff;
+  }
