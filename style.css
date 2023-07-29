@@ -143,9 +143,72 @@
   font-family: 'Vintage';
   src: url('./font/Vintage_Straps_regular.ttf')  format('truetype');
 }
- 
+/*/*/
 
+@font-face {
+  font-family: 'ClubMusic';
+  src: url('./font/NEON\ CLUB\ MUSIC.otf')  format('opentype');
+}
 
+@font-face {
+  font-family: 'Pop';
+  src: url('./font/60s\ Pop.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Agatta';
+  src: url('./font/Agatta.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Brushwork';
+  src: url('./font/Brushwork.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'CarryYou';
+  src: url('./font/Carry-You.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Enfan';
+  src: url('./font/Enfan.otf')  format('opentype');
+}
+
+@font-face {
+  font-family: 'Korian';
+  src: url('./font/Korian.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Lionelo';
+  src: url('./font/Linoleo\ Script.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Monoton';
+  src: url('./font/Monoton-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Rebelion';
+  src: url('./font/Rebelion.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Sunset';
+  src: url('./font/Sunset\ Club\ Free\ Trial.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Monoton';
+  src: url('./font/Monoton-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'NeonBines';
+  src: url('./font/NeonBines.ttf')  format('truetype');
+}
  /* .poster{
     width: 800px;
     height: 350px;
@@ -274,12 +337,17 @@ margin-bottom: 15px;
  }
  .size-select{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
  }
-.size-select-input{
+ .size-row{
   width: 40%;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+ }
+.size-select-input{
+  width: 100%;
     background: #f5f5f5;
     border: 1px solid #b9b9b9;
     border-radius: 15px;
@@ -288,8 +356,11 @@ margin-bottom: 15px;
     font-family: 'Montserrat', sans-serif;
 color: #8a8a8a !important;
 padding-left: 15px;
-margin-bottom: 15px;
-margin-right: 10px;
+margin-bottom: 5px;
+ }
+ .size-row label{
+  color: #8a8a8a;
+  font-size: 1rem;
  }
 .backboard-select{
   width: 100%;

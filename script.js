@@ -95,3 +95,18 @@ function uploadFile(file){
   };
   reader.readAsDataURL(file);
 }
+
+
+
+document.querySelectorAll(".font-select li").forEach(li => {
+  li.addEventListener("click", function() {
+    this.classList.toggle("selected"); // Добавляем/удаляем класс "selected" при клике
+    updateSelectedFonts(); // Обновляем скрытое поле с выбранными шрифтами
+  });
+});
+
+// Функция для обновления скрытого поля с выбранными шрифтами
+function updateSelectedFonts() {
+  const selectedLiElements = document.querySelectorAll(".font-select li.selected");
+  const selectedFonts = Array.from(selectedLiElements).map(li => li.getAttribute("data-font")).join(", ");
+  document.getElementById("selectedFonts").value = selectedFonts;}

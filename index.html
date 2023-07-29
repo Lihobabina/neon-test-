@@ -16,16 +16,14 @@
     <div class="poster">
       <h1 class="yourText">Your Text</h1>
     </div>
-    <form action="">
+    <form>
       <h1>Enter Your text</h1>
       <p style="margin-bottom: 15px;">You can also <a href="#downloadLogo" class="link"> upload an image</a></p>
       <input type="text" class="enter-text input">
       <h1>Choose font</h1>
       <div class="font-select">
-        <li style="font-family: 'amanda';" data-font="amanda">amanda</li>
         <li style="font-family: 'Grayscale';" data-font="Grayscale">Grayscale</li>
         <li style="font-family: 'Ammanda';" data-font="Ammanda">Ammanda</li>
-        <li style="font-family: 'Bebas';" data-font="Bebas">Bebas</li>
         <li style="font-family: 'Brave';" data-font="Brave">Brave</li>
         <li style="font-family: 'BsSignature';" data-font="BsSignature">BsSignature</li>
         <li style="font-family: 'Capsuula';" data-font="Capsuula">Capsuula</li>
@@ -39,14 +37,12 @@
         <li style="font-family: 'KGLego';" data-font="KGLego">KGLego</li>
         <li style="font-family: 'Kiona';" data-font="Kiona">Kiona</li>
         <li style="font-family: 'Lovely';" data-font="Lovely">Lovely</li>
-        <li style="font-family: 'Madina';" data-font="Madina">Madina</li>
         <li style="font-family: 'Glow';" data-font="Glow">Glow</li>
         <li style="font-family: 'HandTypeWritter';" data-font="HandTypeWritter">Writter</li>
         <li style="font-family: 'Nixie';" data-font="Nixie">Nixie</li>
         <li style="font-family: 'Ouvality';" data-font="Ouvality">Ouvality</li>
         <li style="font-family: 'Pacifico';" data-font="Pacifico">Pacifico</li>
         <li style="font-family: 'PaperDaisy';" data-font="PaperDaisy">PaperDaisy</li>
-        <li style="font-family: 'Philosopher';" data-font="Philosopher">Philosopher</li>
         <li style="font-family: 'Quinzey';" data-font="Quinzey">Quinzey</li>
         <li style="font-family: 'Velvet';" data-font="Velvet">Velvet</li>
         <li style="font-family: 'Scifieo';" data-font="Scifieo">Scifieo</li>
@@ -56,9 +52,23 @@
         <li style="font-family: 'Philosopher';" data-font="Philosopher">Philosopher</li>
         <li style="font-family: 'Roketto';" data-font="Roketto">Roketto</li>
         <li style="font-family: 'SciFi';" data-font="SciFi">SciFi</li>
-        <li style="font-family: 'Stenciles';" data-font="Stenciles">Stenciles</li>
         <li style="font-family: 'Vintage';" data-font="Vintage">Vintage</li>
+
+        <!--  -->
+    <li style="font-family: 'ClubMusic';" data-font="ClubMusic">ClubMusic</li>
+    <li style="font-family: 'Pop';" data-font="Pop">60sPop</li>
+    <li style="font-family: 'Agatta';" data-font="Agatta">Agatta</li>
+    <li style="font-family: 'Brushwork';" data-font="Brushwork">Brushwork</li>
+    <li style="font-family: 'CarryYou';" data-font="CarryYou">CarryYou</li>
+    <li style="font-family: 'Enfan';" data-font="Enfan">Enfan</li>
+    <li style="font-family: 'Korian';" data-font="Korian">Korian</li>
+    <li style="font-family: 'Lionelo'; font-size: 1.8rem;" data-font="Lionelo">Lionelo</li>
+    <li style="font-family: 'Monoton';" data-font="Monoton">Monoton</li>
+    <li style="font-family: 'Rebelion';" data-font="Rebelion">Rebelion</li>
+    <li style="font-family: 'Sunset';" data-font="Sunset">Sunset</li>
+    <li style="font-family: 'NeonBines'; font-size: 1.1rem;" data-font="NeonBines">NeonBines</li>
       </div>
+      <input type="hidden" id="selectedFonts" name="selectedFonts" value="">
       <h1>Choose color</h1>
       <div class="color-select">
         <li>
@@ -137,8 +147,14 @@
       </div>
       <h1>Choose size</h1>
       <div class="size-select">
-        <input type="text" name="" id="" class="input size-select-input">
-        <input type="text" name="" id="" class="input size-select-input">
+        <div class="size-row">
+          <input type="text" name="length" id="" class="input size-select-input">
+        <label for="length">Max Length: 85''inches</label>
+        </div>
+        <div class="size-row">
+          <input type="text" name="height" id="" class="input size-select-input">
+        <label for="height">Max Height: 45''inches</label>
+        </div>
       </div>
       <h1>Choose backboard</h1>
       <div class="backboard-select">
@@ -146,7 +162,7 @@
         <li></li>
         <li></li>
       </div>
-      <h1 id="downloadLogo">upload your logo/picture</h1>
+      <h1 id="downloadLogo">upload your own design/picture</h1>
       <div class="file-download">
         <div class="file-item">
           <input type="file" name="" id="fileInput" accept=".jpg, .png, .gif" class="file-input">
