@@ -1,25 +1,20 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-  // Получение данных из формы
-  $text = $_POST["text"];
-  $font = $_POST["font"];
-  $color = $_POST["color"];
-  $size1 = $_POST["size1"];
-  $size2 = $_POST["size2"];
-  $backboard = $_POST["backboard"];
-  $notes = $_POST["notes"];
+if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["selectedFont"])) {
+    $selectedFont = $_POST["selectedFont"];
 
-  // Составление содержимого письма
-  $to = "starshova1309@gmail.com"; // Замените на адрес электронной почты получателя
-  $subject = "Данные формы";
-  $message = "Текст: $text\nШрифт: $font\nЦвет: $color\nРазмер1: $size1\nРазмер2: $size2\nФон: $backboard\nЗаметки: $notes";
+    // Настройки для отправки письма
+    $to = "starshova1309@gmail.com"; // Адрес получателя
+    $subject = "Выбранный шрифт"; // Тема письма
+    $message = "Выбранный шрифт: " . $selectedFont; // Текст письма
 
-  // Отправка письма
-  $headers = "From: sender@example.com"; // Замените на адрес электронной почты отправителя
-  if (mail($to, $subject, $message, $headers)) {
-    echo "Письмо успешно отправлено!";
-  } else {
-    echo "Не удалось отправить письмо.";
-  }
+    // Отправка письма
+    $headers = "From: sender@example.com\r\n"; // Адрес отправителя
+    mail($to, $subject, $message, $headers);
+
+    // Ответ на запрос клиента (можно вернуть какие-то данные обратно клиенту)
+    echo json_encode(array("status" => "success"));
+} else {
+    // Ошибка, если данные не были отправлены
+    echo json_encode(array("status" => "error", "message" => "Данные не получены."));
 }
 ?>

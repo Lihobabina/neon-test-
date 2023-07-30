@@ -16,17 +16,30 @@
     <div class="poster">
       <h1 class="yourText">Your Text</h1>
     </div>
-    <form>
-      <h1>Enter Your text</h1>
+    <form id="myForm" action="/thank-you" netlify>
+      <div class="text-input">
+        <h1>Enter Your text</h1>
       <p style="margin-bottom: 15px;">You can also <a href="#downloadLogo" class="link"> upload an image</a></p>
       <input type="text" class="enter-text input">
+      </div>
       <h1>Choose font</h1>
       <div class="font-select">
-        <li style="font-family: 'Grayscale';" data-font="Grayscale">Grayscale</li>
-        <li style="font-family: 'Ammanda';" data-font="Ammanda">Ammanda</li>
-        <li style="font-family: 'Brave';" data-font="Brave">Brave</li>
-        <li style="font-family: 'BsSignature';" data-font="BsSignature">BsSignature</li>
-        <li style="font-family: 'Capsuula';" data-font="Capsuula">Capsuula</li>
+        <li style="font-family: 'Grayscale';" data-font="Grayscale">
+          <input type="radio" name="selected_font" value="Grayscale" class="input-font">
+          Grayscale</li>
+        <li style="font-family: 'Ammanda';" data-font="Ammanda">
+          <input type="radio" name="selected_font" value="Ammanda" class="input-font">
+          Ammanda</li>
+        <li style="font-family: 'Brave';" data-font="Brave">
+          <input type="radio" name="selected_font" value="Brave" class="input-font">
+          Brave</li>
+        <li style="font-family: 'BsSignature';" data-font="BsSignature">
+          <input type="radio" name="selected_font" value="BsSignature" class="input-font">
+          BsSignature</li>
+        <li style="font-family: 'Capsuula';" data-font="Capsuula">
+          <input type="radio" name="selected_font" value="Capsuula" class="input-font">
+          Capsuula</li>
+          <!--  -->
         <li style="font-family: 'Collegiate';" data-font="Collegiate">Collegiate</li>
         <li style="font-family: 'DancingDog';" data-font="DancingDog">DancingDog</li>
         <li style="font-family: 'DolceVita';" data-font="DolceVita">DolceVita</li>
@@ -158,9 +171,30 @@
       </div>
       <h1>Choose backboard</h1>
       <div class="backboard-select">
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class="backboard-li">
+          <i class="fa-solid fa-check "></i>
+          <input type="checkbox" name="backboard" id="" class="backboard-input">
+          <img src="./img/cut-to-letter'.png" alt="">
+          <p>Cut to Letter</p>
+        </li>
+        <li class="backboard-li">
+          <i class="fa-solid fa-check "></i>
+          <input type="checkbox" name="backboard" id="" class="backboard-input">
+          <img src="./img/cut-to-rect'.png" alt="">
+          <p>Cut to Rectangle</p>
+        </li>
+        <li class="backboard-li">
+          <i class="fa-solid fa-check "></i>
+          <input type="checkbox" name="backboard" id="" class="backboard-input">
+          <img src="./img/cut-to-shape.png" alt="">
+          <p>Cut to Shape</p>
+        </li>
+        <li class="backboard-li">
+          <i class="fa-solid fa-check "></i>
+          <input type="checkbox" name="backboard" id="" class="backboard-input">
+          <img src="./img/cut-to-elips.png" alt="">
+          <p>Cut to Elips</p>
+        </li>
       </div>
       <h1 id="downloadLogo">upload your own design/picture</h1>
       <div class="file-download">

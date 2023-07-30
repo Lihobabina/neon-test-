@@ -55,9 +55,9 @@ fontList.forEach(li => {
         const yourTextElement = document.querySelector('.yourText');
         yourTextElement.style.fontFamily = selectedFont;
         fontList.forEach(item => {
-            item.classList.remove('selected');
+            item.classList.remove('selected-font');
         });
-        li.classList.add('selected');
+        li.classList.add('selected-font');
     });
 });
 fontList[0].click();
@@ -110,3 +110,27 @@ function updateSelectedFonts() {
   const selectedLiElements = document.querySelectorAll(".font-select li.selected");
   const selectedFonts = Array.from(selectedLiElements).map(li => li.getAttribute("data-font")).join(", ");
   document.getElementById("selectedFonts").value = selectedFonts;}
+/////////////
+const checkboxes = document.querySelectorAll('.backboard-select .backboard-input');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', function () {
+      checkboxes.forEach((otherCheckbox) => {
+        if (otherCheckbox !== this) {
+          const otherLiElement = otherCheckbox.closest('li');
+          otherLiElement.classList.remove('selected-backboard');
+
+          // Hide the checkmark on the other li elements
+          const otherIconElement = otherLiElement.querySelector('.fa-solid');
+          otherIconElement.classList.remove('visible');
+        }
+      });
+
+      const liElement = this.closest('li');
+      liElement.classList.toggle('selected-backboard');
+
+      // Toggle the checkmark on the current li element
+      const iconElement = liElement.querySelector('.fa-solid');
+      iconElement.classList.toggle('visible');
+    });
+  });
