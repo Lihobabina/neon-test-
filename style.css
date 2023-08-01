@@ -578,6 +578,7 @@ color: #8a8a8a !important;
   .poster{
     width: 100%;
     height: 50vh;
+    position: static;
   }
   .poster img{
     width: 100%;
