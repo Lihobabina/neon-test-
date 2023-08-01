@@ -8,30 +8,35 @@ let inputElement = document.querySelector('.enter-text');
       // Update the "Your Text" element with the user's input
       yourTextElement.textContent = inputElement.value;
     });
-
-
-const lightbulbs = document.querySelectorAll('.fa-regular');
+//////////////////////////////////////////////////////
+const liElements = document.querySelectorAll('.color-select-li');
 const text = document.querySelector('.yourText');
-const firstBulb = lightbulbs[0]; // Get the first bulb from the NodeList
-const firstBulbShadowColor = firstBulb.getAttribute('data-shadow-color');
+let activeBulb = null; // Initialize activeBulb to null
 
-// Apply the text shadow and color to the first bulb
-firstBulb.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${firstBulbShadowColor}`;
-firstBulb.style.color = 'white';
+// Function to set the first bulb as active when the page is loaded
+function setFirstBulbActive() {
+  const firstBulb = liElements[0].querySelector('.fa-lightbulb');
+  const firstBulbShadowColor = firstBulb.getAttribute('data-shadow-color');
+  firstBulb.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${firstBulbShadowColor}`;
+  firstBulb.style.color = 'white';
+  activeBulb = firstBulb;
+  text.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${firstBulbShadowColor}`;
+}
 
-// Apply the text shadow to the "yourText" element
-text.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${firstBulbShadowColor}`;
+// Call the function to set the first bulb as active on page load
+setFirstBulbActive();
 
-// Set the activeBulb variable to the first bulb
-activeBulb = firstBulb;
-lightbulbs.forEach((bulb) => {
-  bulb.addEventListener('mouseenter', function() {
-    const shadowColor = bulb.getAttribute('data-shadow-color');
+liElements.forEach((li) => {
+  const bulb = li.querySelector('.fa-lightbulb');
+  const shadowColor = bulb.getAttribute('data-shadow-color');
+  const mainColor = bulb.getAttribute('data-color');
+
+  li.addEventListener('mouseenter', function() {
     bulb.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${shadowColor}`;
     bulb.style.color = 'white';
   });
-  bulb.addEventListener('click', function() {
-    const shadowColor = bulb.getAttribute('data-shadow-color');
+
+  li.addEventListener('click', function() {
     if (activeBulb !== null && activeBulb !== bulb) {
       activeBulb.style.textShadow = 'none';
       activeBulb.style.color = activeBulb.getAttribute('data-color');
@@ -40,14 +45,16 @@ lightbulbs.forEach((bulb) => {
     text.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${shadowColor}`;
     bulb.style.textShadow = `rgb(255, 255, 255) 0px 0px 1px, rgb(255, 255, 255) 0px 0px 2px, ${shadowColor}`;
   });
-  bulb.addEventListener('mouseleave', function() {
-    const mainColor = bulb.getAttribute('data-color');
+
+  li.addEventListener('mouseleave', function() {
     if (activeBulb !== bulb) {
       bulb.style.textShadow = 'none';
       bulb.style.color = mainColor;
     }
   });
 });
+
+///////////////////////////////////////////////////
 const fontList = document.querySelectorAll('.font-select li');
 fontList.forEach(li => {
     li.addEventListener('click', () => {
@@ -79,38 +86,8 @@ inputElement.addEventListener('blur', function() {
 })
 
 
-const fileInput = document.getElementById('fileInput');
-const previewImg = document.querySelector('.file-preview');
-fileInput.addEventListener('change', ()=>{
-  uploadFile(fileInput.files[0]);
-});
-function uploadFile(file){
-  let reader = new FileReader();
-  reader.onload = function(e){
-    previewImg.innerHTML = `<img src=" ${e.target.result}" >`;
-    previewImg.style.marginLeft = '15px';
-  };
-  reader.onerror = function(e){
-    alert('Error');
-  };
-  reader.readAsDataURL(file);
-}
 
-
-
-document.querySelectorAll(".font-select li").forEach(li => {
-  li.addEventListener("click", function() {
-    this.classList.toggle("selected"); // Добавляем/удаляем класс "selected" при клике
-    updateSelectedFonts(); // Обновляем скрытое поле с выбранными шрифтами
-  });
-});
-
-// Функция для обновления скрытого поля с выбранными шрифтами
-function updateSelectedFonts() {
-  const selectedLiElements = document.querySelectorAll(".font-select li.selected");
-  const selectedFonts = Array.from(selectedLiElements).map(li => li.getAttribute("data-font")).join(", ");
-  document.getElementById("selectedFonts").value = selectedFonts;}
-/////////////
+///////////////////////
 const checkboxes = document.querySelectorAll('.backboard-select .backboard-input');
 
   checkboxes.forEach((checkbox) => {
