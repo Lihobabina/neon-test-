@@ -219,9 +219,13 @@
   width: 100%;
   display: flex;
  }
- .poster{
+ .poster-cont{
   width: 55%;
   height: 100vh;
+ }
+ .poster{
+  width: 100%;
+  height: 100%;
   position: relative;
   /* background-image: url(./2.jpg);
   background-size: cover;
@@ -575,10 +579,14 @@ color: #8a8a8a !important;
   .container{
     flex-direction: column;
   }
-  .poster{
+  .poster-cont{
+    position: static;
     width: 100%;
     height: 50vh;
-    position: static;
+  }
+  .poster{
+    width: 100%;
+    height: 100%;
   }
   .poster img{
     width: 100%;
