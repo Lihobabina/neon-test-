@@ -576,8 +576,12 @@ color: #8a8a8a !important;
 
 .mob-form{
   display: none;
+  width: 0;
+  height: 0;
 }
+
 @media (max-width: 768px){
+
   .container{
     flex-direction: column;
     height: 100%;
@@ -592,29 +596,32 @@ color: #8a8a8a !important;
   #myForm{
     display: none;
   }
-  .mob-form{
+  .mob-form {
     display: block;
     text-align: center;
     width: 100%;
     height: 320px;
     overflow-x: hidden;
   }
-  .swiper-container{
+  
+  .swiper-container {
     width: 100%;
-    height: auto;
-    max-height: 320px;
+    height: 100%; /* Set a fixed height for the swiper-container */
+    max-height: 320px; /* Optionally, you can set a max-height to limit the expansion */
+/* Enable vertical scrolling for the swiper-container */
   }
-  .swiper-wrapper{
+  
+  .swiper-wrapper {
     width: 100%;
-    height: auto;
-    max-height: 320px;
+    max-height: auto;
   }
-  .swiper-slide{
+  
+  .swiper-slide {
     width: 100%;
-    height: auto;
-    max-height: 320px;
-    overflow-y: scroll;
+    max-height: auto;
+    overflow-y: auto; 
   }
+  
   .fa-circle-left{
     margin-right: 15px;
   }
