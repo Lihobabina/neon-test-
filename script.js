@@ -8,6 +8,12 @@ let inputElement = document.querySelector('.enter-text');
       // Update the "Your Text" element with the user's input
       yourTextElement.textContent = inputElement.value;
     });
+let textElMob = document.querySelector('#textMob')
+    let inpMob = document.querySelector('.enter-text-mob');
+    inpMob.addEventListener('input', function() {
+      // Update the "Your Text" element with the user's input
+      textElMob.textContent = inpMob.value;
+    });
 //////////////////////////////////////////////////////
 const liElements = document.querySelectorAll('.color-select-li');
 const text = document.querySelector('.yourText');

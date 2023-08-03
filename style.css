@@ -596,6 +596,7 @@ color: #8a8a8a !important;
     display: block;
     text-align: center;
     width: 100%;
+    overflow-x: hidden;
   }
   .swiper-container{
     width: 100%;

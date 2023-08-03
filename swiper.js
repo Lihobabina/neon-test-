@@ -1,7 +1,7 @@
 // Инициализация слайдера
-var swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
     // Настройки слайдера
-    allowTouchMove: true,
+    allowTouchMove: false,
     loop: false,
     // Другие настройки, если есть
     slidesPerView: 1,
@@ -9,7 +9,7 @@ var swiper = new Swiper('.swiper-container', {
     on: {
       init: function () {
         // Найти все кнопки "Предыдущий" и добавить обработчик клика
-        var prevButtons = document.querySelectorAll('.custom-button-prev');
+        const prevButtons = document.querySelectorAll('.custom-button-prev');
         prevButtons.forEach(function (button) {
           button.addEventListener('click', function () {
             swiper.slidePrev();
@@ -17,7 +17,7 @@ var swiper = new Swiper('.swiper-container', {
         });
   
         // Найти все кнопки "Следующий" и добавить обработчик клика
-        var nextButtons = document.querySelectorAll('.custom-button-next');
+        const nextButtons = document.querySelectorAll('.custom-button-next');
         nextButtons.forEach(function (button) {
           button.addEventListener('click', function () {
             swiper.slideNext();
