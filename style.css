@@ -600,14 +600,14 @@ color: #8a8a8a !important;
     display: block;
     text-align: center;
     width: 100%;
-    height: 320px;
+    height: 360px;
     overflow-x: hidden;
   }
   
   .swiper-container {
     width: 100%;
     height: 100%; /* Set a fixed height for the swiper-container */
-    max-height: 320px; /* Optionally, you can set a max-height to limit the expansion */
+    max-height: 360px; /* Optionally, you can set a max-height to limit the expansion */
 /* Enable vertical scrolling for the swiper-container */
   }
   
@@ -633,5 +633,18 @@ color: #8a8a8a !important;
   }
   .text-input, .color-select, .font-select, .indoor-select, .file-download, #downloadLogo{
     border: none;
+  }
+  .enter-text-mob{
+    margin-bottom: 15px;
+  }
+  .file-download, .color-select{
+    margin-bottom: 0;
+  }
+  .color-select li{
+    width: 15%;
+  }
+  .text-input{
+    margin: 0;
+    padding: 0;
   }
 }
