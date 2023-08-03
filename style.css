@@ -583,11 +583,11 @@ color: #8a8a8a !important;
     height: 100%;
   }
   .poster-cont{
-    position: sticky;
+    /* position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 1; */
     width: 100%;
-    height: 50%;
+    height: 500px;
   }
   #myForm{
     display: none;
@@ -596,6 +596,7 @@ color: #8a8a8a !important;
     display: block;
     text-align: center;
     width: 100%;
+    height: 320px;
     overflow-x: hidden;
   }
   .swiper-container{
