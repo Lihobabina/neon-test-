@@ -557,6 +557,7 @@ color: #8a8a8a !important;
 .file-preview{
   display: inline-block;
   max-width: 100px;
+  margin-left: 15px;
 }
 .file-preview img{
   max-width: 100%;
@@ -691,6 +692,7 @@ color: #8a8a8a !important;
   }
   .file-previewMob{
     display: inline-block;
+    margin-left: 15px;
     max-width: 100px;
   }
   .file-previewMob img{
