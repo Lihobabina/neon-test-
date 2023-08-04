@@ -76,4 +76,24 @@ document.addEventListener('DOMContentLoaded', function () {
 		};
 		reader.readAsDataURL(file);
 	}
+	// const formImageMob = document.getElementById('formImageMob');
+	// const formPreviewMob = document.getElementById('formPreviewMob');
+	// formImageMob.addEventListener('change', () => {
+	// 	uploadFile(formImageMob.files[0]);
+	// });
+	// function uploadFile(file) {
+	// 	if (!['image/jpeg', 'image/png', 'image/gif'].includes(file.type)) {
+	// 		alert('Only images allowed');
+	// 		formImageMob.value = '';
+	// 		return;
+	// 	}
+	// 	var reader = new FileReader();
+	// 	reader.onload = function (e) {
+	// 		formPreviewMob.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+	// 	};
+	// 	reader.onerror = function (e) {
+	// 		alert('Ошибка');
+	// 	};
+	// 	reader.readAsDataURL(file);
+	// }
 });
